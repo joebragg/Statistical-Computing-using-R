@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statistical Computing using R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Statistical Computing using R">
+  <meta name="author" content="Joe Bragg">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Statistical Computing using R</h1>
+    <h2></h2>
+    <p>Joe Bragg<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>R in Industry</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="http://www.gartner.com/newsroom/id/2848718">Gartner Survey Reveals That 73 Percent of Organizations Have Invested or Plan to Invest in Big Data in the Next Two Years</a></p>
+
+<p><a href="http://www.infoworld.com/article/2874853/big-data/microsoft-to-acquire-r-language-powerhouse-revolution-analytics.html">Microsoft to acquire R language powerhouse Revolution Analytics</a></p>
+
+<p><a href="http://www.mckinsey.com/features/big_data">Big data: The next frontier for competition</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Uses of R in Supply Chain</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here are just a few potential uses for R in Supply Chain</p>
+
+<ul>
+<li>Process improvement including support for Six Sigma<br></li>
+<li>Forecasting &amp; inventory planning</li>
+<li>Supplier analysis</li>
+<li>Finding &amp; reducing sources of churn</li>
+<li>Identifying root causes for delays &amp; issues</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Overview of R</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Commonly used R Packages - Data Manipulation</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data.table</td>
+<td>Fast aggregation of large data, fast ordered joins, fast add/modify/delete of columns by group using no copies at all, list columns and a fast file reader.</td>
+</tr>
+<tr>
+<td>plyr</td>
+<td>Set of tools that solves a common set of problems: you need to break a big problem down into manageable pieces, operate on each pieces and then put all the pieces back together.</td>
+</tr>
+<tr>
+<td>reshape2</td>
+<td>Restructure and aggregate data using just two functions: melt and dcast (or acast).</td>
+</tr>
+<tr>
+<td>Hmisc</td>
+<td>Functions useful for data analysis, high-level graphics, utility operations, functions for computing sample size and power, importing datasets, imputing missing values, advanced table making, variable clustering, character string manipulation, conversion of R objects to LaTeX code, and recoding variables.</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Commonly used R Packages - Date/Time Formating</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>lubridate</td>
+<td>Provides functions to identify and parse date-time data, extract and modify components of a date-time (years, months, days, hours, minutes, and seconds), perform accurate math on date-times, handle time zones and Daylight Savings Time.</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Commonly used R Packages - Graphics</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>lattice</td>
+<td>high-level data visualization system, with an emphasis on multivariate data, that is sufficient for typical graphics needs, and is also flexible enough to handle most nonstandard requirements.</td>
+</tr>
+<tr>
+<td>ggplot2</td>
+<td>An implementation of the grammar of graphics in R. It combines the advantages of both base and lattice graphics: conditioning and shared axes are handled automatically, and you can still build up a plot step by step from multiple data sources. It also implements a sophisticated multidimensional conditioning system and a consistent interface to map data to aesthetic attributes.</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Commonly used R Packages - Machine Learning</h2>
+  </hgroup>
+  <article data-timings="">
+    <table><thead>
+<tr>
+<th>Package</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>caret</td>
+<td>Functions for training and plotting classification and regression models.</td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Basic Data Types</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">c(1,2,5.3,6,-2,4) # numeric vector
+</code></pre>
+
+<pre><code>## [1]  1.0  2.0  5.3  6.0 -2.0  4.0
+</code></pre>
+
+<pre><code class="r">c(&quot;one&quot;,&quot;two&quot;,&quot;three&quot;) # character vector
+</code></pre>
+
+<pre><code>## [1] &quot;one&quot;   &quot;two&quot;   &quot;three&quot;
+</code></pre>
+
+<pre><code class="r">c(TRUE,TRUE,TRUE,FALSE,TRUE,FALSE) #logical vector
+</code></pre>
+
+<pre><code>## [1]  TRUE  TRUE  TRUE FALSE  TRUE FALSE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Matrices</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">matrix(c(1,2,3,4,5,6,7,8,9), nrow=3, ncol=3, byrow=FALSE, dimnames=list(c(&quot;Row1&quot;,&quot;Row2&quot;,&quot;Row3&quot;), c(&quot;Col1&quot;,&quot;Col2&quot;,&quot;Col3&quot;)))
+</code></pre>
+
+<pre><code>##      Col1 Col2 Col3
+## Row1    1    4    7
+## Row2    2    5    8
+## Row3    3    6    9
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Data.Frames</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">d &lt;- c(1,2,1/0,NaN)
+e &lt;- c(&quot;red&quot;, &quot;white&quot;, &quot;blue&quot;, NA)
+f &lt;- c(TRUE,TRUE,TRUE,FALSE)
+mydata &lt;- data.frame(d,e,f)
+names(mydata) &lt;- c(&quot;ID&quot;,&quot;Color&quot;,&quot;Passed&quot;) # variable names
+mydata
+</code></pre>
+
+<pre><code>##    ID Color Passed
+## 1   1   red   TRUE
+## 2   2 white   TRUE
+## 3 Inf  blue   TRUE
+## 4 NaN  &lt;NA&gt;  FALSE
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Lists</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">list(colors=e, numbers=d, mydf=mydata, bam=&quot;tada&quot;)
+</code></pre>
+
+<pre><code>## $colors
+## [1] &quot;red&quot;   &quot;white&quot; &quot;blue&quot;  NA     
+## 
+## $numbers
+## [1]   1   2 Inf NaN
+## 
+## $mydf
+##    ID Color Passed
+## 1   1   red   TRUE
+## 2   2 white   TRUE
+## 3 Inf  blue   TRUE
+## 4 NaN  &lt;NA&gt;  FALSE
+## 
+## $bam
+## [1] &quot;tada&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Command Syntax</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">plot(cars)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>RStudio Navigation</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='R in Industry'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Uses of R in Supply Chain'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Overview of R'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Commonly used R Packages - Data Manipulation'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Commonly used R Packages - Date/Time Formating'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Commonly used R Packages - Graphics'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Commonly used R Packages - Machine Learning'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Basic Data Types'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Matrices'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Data.Frames'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Lists'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Command Syntax'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='RStudio Navigation'>
+         13
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
